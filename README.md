@@ -69,4 +69,19 @@ print(ai_custom_result.results)
 
 ```
 
+## Search API
+You can also perform a search using a specific datamodel_id. This method allows users to input custom queries and retrieve data based on the datamodel provided.
+```python
+search_result = app.search(
+    query="Latest Microsoft News",
+    datamodel_id="dm_01htjq2njgecvah7ncepm8v87y",
+    similarity_top_k=6,
+    ref="familyproof.com",
+    num_articles_ref=3
+)
+print(search_result.results)
+
+```
+
+
 Checkout (example.py)[https://github.com/DappierAI/dappier-py] in this repository for a working example.
