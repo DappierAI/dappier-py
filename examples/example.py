@@ -32,6 +32,19 @@ def main():
     except Exception as e:
         print(f"Error during custom AI recommendations: {e}")
 
+    # Example 4: Search API with custom data model and options
+    try:
+        search_result = app.search(
+            query="Latest Microsoft News",
+            datamodel_id="dm_01htjq2njgecvah7ncepm8v87y",
+            similarity_top_k=6,
+            ref="familyproof.com",
+            num_articles_ref=3
+        )
+        print("Search API Results:", search_result.results)
+    except Exception as e:
+        print(f"Error during Search API call: {e}")
+
 
 if __name__ == "__main__":
     main()
